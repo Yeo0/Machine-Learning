@@ -1,4 +1,3 @@
-#웹에서 쉽게 사용할 수 있는 언어판별 애플리케이션
 #!/usr/bin/env python3
 import cgi, os.path
 from sklearn.externals import joblib
@@ -18,7 +17,7 @@ def show_form(text, msg=""):
         <p><input type="submit" value="판정"></p>
         <p>{1}</p>
         </form></body></html>
-    """.format(cgi,escape(text), msg))
+    """.format(cgi.escape(text), msg))
 
 #판정하기
 def detect_lang(text):
